@@ -161,7 +161,7 @@ const Header = ({ onMenuClick, currentPage }) => {
         <div className="flex items-center gap-2">
           <button onClick={() => { toggleTheme(); addToast(`Switched to ${isDark ? 'light' : 'dark'} mode`, 'success'); }} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 active:scale-95 transition-all">{isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}</button>
           <button onClick={() => addToast('You have 3 new notifications', 'info')} className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 relative active:scale-95 transition-all"><Bell className="w-5 h-5" /><span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" /></button>
-          <button onClick={() => addToast('Profile clicked', 'info')} className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-medium text-sm active:scale-95 transition-all">RI</button>
+          <button onClick={() => addToast('Profile clicked', 'info')} className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-medium text-sm active:scale-95 transition-all">RIAZ</button>
         </div>
       </div>
     </header>

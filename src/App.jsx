@@ -1,7 +1,7 @@
 import { useRegisterSW } from "virtual:pwa-register/react";
 import AApp from "./code";
 import ABpp from "./v10";
-
+import Reaz from "./reaz";
 function App() {
   // PWA আপডেট হ্যান্ডেল করার জন্য হুক
   const {
@@ -18,7 +18,8 @@ function App() {
   return (
     <div className="relative">
       {/* আপনার মেইন কম্পোনেন্ট */}
-      <ABpp />
+      {/* <ABpp /> */}
+      <Reaz />
 
       {/* আপডেট পপ-আপ UI */}
       {(offlineReady || needRefresh) && (
