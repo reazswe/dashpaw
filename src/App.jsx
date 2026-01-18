@@ -18,8 +18,8 @@ function App() {
   return (
     <div className="relative">
       {/* আপনার মেইন কম্পোনেন্ট */}
-      {/* <ABpp /> */}
-      <Reaz />
+      <ABpp /> 
+      
 
       {/* আপডেট পপ-আপ UI */}
       {(offlineReady || needRefresh) && (
