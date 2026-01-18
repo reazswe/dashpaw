@@ -3,13 +3,12 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { VitePWA } from "vite-plugin-pwa";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
     VitePWA({
-      registerType: "autoUpdate",
+      registerType: "prompt", // ইউজারকে আপডেটের জন্য পপ-আপ দেখাবে
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "mask-icon.svg"],
       manifest: {
         name: "My React App",
@@ -21,12 +20,12 @@ export default defineConfig({
         theme_color: "#0f172a",
         icons: [
           {
-            src: "icons/icon-192.png", // আপনার public/icons ফোল্ডার অনুযায়ী
+            src: "icons/icon-192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "icons/icon-512.png", // এখানে "/" এর বদলে "icons/" করা হয়েছে যাতে এরর না আসে
+            src: "icons/icon-512.png",
             sizes: "512x512",
             type: "image/png",
           },
@@ -34,12 +33,11 @@ export default defineConfig({
             src: "icons/icon-512.png",
             sizes: "512x512",
             type: "image/png",
-            purpose: "any maskable", // অ্যান্ড্রয়েড স্প্ল্যাশ স্ক্রিনের জন্য জরুরি
+            purpose: "any maskable",
           },
         ],
       },
       workbox: {
-        // অফলাইন মোড চালু করার জন্য ক্যাশিং কনফিগারেশন
         globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
         runtimeCaching: [
           {
@@ -58,7 +56,6 @@ export default defineConfig({
     }),
   ],
   build: {
-    // বড় ফাইলের কারণে অ্যাপ যাতে স্লো বা ক্রাশ না হয় তার সমাধান
     chunkSizeWarningLimit: 1600,
     rollupOptions: {
       output: {
